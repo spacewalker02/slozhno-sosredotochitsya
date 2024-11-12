@@ -15,6 +15,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  outline: 1px solid var(--menu-color);
 }
 
 a:focus,
@@ -32,16 +33,12 @@ button:disabled {
 
 .header__theme-menu-button {
   border: none;
-  padding: 0 25px;
+  padding: 0 13px;
   color: var(--menu-color);
   font-family: inherit;
   font-size: 18px;
   background-color: transparent;
   cursor: pointer;
-}
-
-.header__theme-menu-button_active {
-  outline: 1px solid var(--menu-color);
 }
 
 .header__theme-menu-button:hover {
@@ -71,8 +68,8 @@ button:disabled {
   width: 25px;
   border-top: 1px solid var(--menu-color);
   border-right: 1px solid var(--menu-color);
-  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
-  right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
+  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
 
 .decorated-zone::before {
@@ -195,6 +192,12 @@ button:disabled {
   line-height: 130%;
 }
 
+.content-text {
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 18px;
+}
+
 .content__paragraph {
   display: flex;
   flex-direction: column;
@@ -238,6 +241,7 @@ button:disabled {
 @media (min-width: 500px) {
   .header_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
   }
 
   .text-header {
@@ -249,10 +253,6 @@ button:disabled {
   .content__title-header {
     grid-row: 2;
     grid-column: 2;
-  }
-
-  .header_title {
-    margin-left: -20px;
   }
 
   .two-columns__block {
