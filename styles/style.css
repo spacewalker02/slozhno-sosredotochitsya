@@ -150,11 +150,6 @@ button:disabled {
 
 .content__title-header {
   grid-row: 2;
-  font-family: var(--main-font);
-  color: inherit;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 130%;
   width: 100%;
 }
 
@@ -169,7 +164,7 @@ button:disabled {
 }
 
 .block:not(:last-of-type) {
-  margin-bottom: 50px;
+  margin-bottom: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);;
 }
 
 .block__content {
@@ -186,7 +181,15 @@ button:disabled {
 
 .content__title {
   font-family: var(--main-font);
-  color: inherit;
+  color: var(--title-color);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 130%;
+}
+
+.content__block-title {
+  font-family: var(--main-font);
+  color: var(--block-title-color);
   font-size: 18px;
   font-weight: bold;
   line-height: 130%;
@@ -206,6 +209,7 @@ button:disabled {
 
 .advice_title {
   font-weight: normal;
+  color: var(--block-title-color);
 }
 
 .advice__block {
