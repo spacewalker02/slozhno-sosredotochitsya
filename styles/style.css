@@ -2,4 +2,327 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-inline-size: 375px;
+  margin: 0;
+  background-color: var(--bg-color);
+  background-image: url(../images/cover-image-light.png);
+  color: var(--text-color);
+  font-family: var(--main-font), sans-serif;
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid currentColor;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 0 25px;
+  color: var(--menu-color);
+  font-family: inherit;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.4)
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: '';
+  height: 25px;
+  width: 25px;
+  border-top: 1px solid var(--menu-color);
+  border-right: 1px solid var(--menu-color);
+  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
+  right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: '';
+  height: 25px;
+  width: 25px;
+  border-bottom: 1px solid var(--menu-color);
+  border-left: 1px solid var(--menu-color);
+  bottom: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.decoration {
+  display: var(--hidden-element);
+  position: absolute;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  top: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+  right: clamp(2.375rem, 2.0139rem + 1.5408vw, 3rem);
+  line-height: 25px;
+  align-self: center;
+}
+
+.decoration::after {
+  content: '';
+  color: var(--accent-color);
+  display: var(--hidden-element);
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  left: 38px;
+  top: 8px;
+  box-shadow: 0px 0px 4px 2px currentColor;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  margin-bottom: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+}
+
+.header__theme-menu {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+  grid-row: 2;
+}
+
+.header_title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--header-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.text-header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-self: center;
+}
+
+.content__title-header {
+  grid-row: 2;
+  font-family: var(--main-font);
+  color: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 130%;
+  width: 100%;
+}
+
+.content {
+  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.block:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.block__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content__main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content__title {
+  font-family: var(--main-font);
+  color: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 130%;
+}
+
+.content__paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.advice_title {
+  font-weight: normal;
+}
+
+.advice__block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  margin-top: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header_footer {
+  justify-self: center;
+  grid-row: 2;
+}
+
+@media (min-width: 500px) {
+  .header_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .text-header {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content__title-header {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .header_title {
+    margin-left: -20px;
+  }
+
+  .two-columns__block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  .content-why {
+    grid-column: 1;
+  }
+
+  .content-text-why {
+    grid-column: 2;
+  }
+
+  .content-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max(192px) max(230px) max(318px);
+    gap: 20px;
+  }
+
+  .image_sunset {
+    grid-column: span 2;
+  }
+
+  .image_ice-cream {
+    grid-row: span 2;
+  }
+
+  .image_tape {
+    grid-row: span 2;
+    grid-column: 1;
+  }
+
+  .image_street {
+    grid-column: span 2;
+  }
+}
+
+@media (width >= 900px) {
+  .header__theme-menu {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 10px;
+    grid-row: 1;
+  }
+
+  .content-images {
+    grid-template-rows: max(260px) max(315px) max(428px);
+  }
+
+  .three-columns__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    background-image: url(../images/cover-image-dark.png);
+  }
+
 }
