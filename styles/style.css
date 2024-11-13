@@ -314,6 +314,13 @@ button:disabled {
     grid-row: 1;
   }
 
+  .two-columns__block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+
   .content-why {
     grid-column: 1;
   }
