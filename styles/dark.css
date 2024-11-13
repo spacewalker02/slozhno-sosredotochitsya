@@ -4,10 +4,6 @@
   переключая тему
 */
 
-.page.theme_dark {
-  background-image: url(../images/cover-image-dark.png);
-}
-
 .theme_dark {
   --bg-color: #000028;
   --text-color: #f1b2ce;
@@ -19,4 +15,48 @@
   --menu-outline: 1px solid rgba(255, 0, 112, 0.4);
   --title-color: #ff0070;
   --block-title-color: #000028;
+  --background: url(../images/cover-image-dark.png);
+}
+
+.decoration {
+  display: var(--hidden-element);
+  position: absolute;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  top: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+  right: clamp(2.375rem, 2.0139rem + 1.5408vw, 3rem);
+  line-height: 25px;
+  align-self: center;
+}
+
+.decoration::after {
+  content: '';
+  color: var(--accent-color);
+  display: var(--hidden-element);
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  left: 38px;
+  top: 8px;
+  box-shadow: 0px 0px 4px 2px currentColor;
+}
+
+
+@media (prefers-color-scheme: dark) {
+ .page {
+    --bg-color: #000028;
+    --text-color: #f1b2ce;
+    --header-text-color: #000028;
+    --header-color: #db00ff;
+    --accent-color: #ff0070;
+    --menu-color: #ff0070;
+    --hidden-element: block;
+    --menu-outline: 1px solid rgba(255, 0, 112, 0.4);
+    --title-color: #ff0070;
+    --block-title-color: #000028;
+    --background: url(../images/cover-image-dark.png);
+  }
 }
