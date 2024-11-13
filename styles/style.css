@@ -29,7 +29,7 @@ button:disabled {
 
 .header__theme-menu-button {
   border: none;
-  padding: 2.5px 13px;
+  padding: 4px 13px;
   color: var(--menu-color);
   font-family: inherit;
   font-size: 18px;
@@ -208,8 +208,8 @@ button:disabled {
 }
 
 .content-images {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
   gap: 10px;
 }
 
