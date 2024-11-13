@@ -5,12 +5,8 @@
   min-inline-size: 375px;
   margin: 0;
   background-color: var(--bg-color);
-  background-image: var(--background);
   color: var(--text-color);
   font-family: var(--main-font), sans-serif;
-  background-position: center;
-  background-size: 100%;
-  background-attachment: fixed;
 }
 
 .header__theme-menu-button_active {
@@ -33,14 +29,14 @@ button:disabled {
 
 .header__theme-menu-button {
   border: none;
-  padding: 1.5px 13px;
+  padding: 2.5px 13px;
   color: var(--menu-color);
   font-family: inherit;
   font-size: 18px;
   background-color: transparent;
   cursor: pointer;
   text-transform: lowercase;
-  line-height: 100%;
+  line-height: 1em;
 }
 
 .header__theme-menu-button:hover {
@@ -92,6 +88,11 @@ button:disabled {
   height: 100vh;
   padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   margin-bottom: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  background-image: var(--background);
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .header__theme-menu {
@@ -147,6 +148,12 @@ button:disabled {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.block__images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .content__main-text {
@@ -264,6 +271,10 @@ button:disabled {
     grid-column: 2;
   }
 
+  .block__images {
+    gap: 20px;
+  }
+
   .content-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -304,6 +315,10 @@ button:disabled {
     grid-row: 1;
   }
 
+  .header_title {
+    text-shadow: 4px 4px 0 var(--focus-color);
+  }
+
   .two-columns__block {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -317,6 +332,10 @@ button:disabled {
 
   .content-text-why {
     grid-column: 2;
+  }
+
+  .advice-text {
+    line-height: 132%;
   }
 
   .content-images {
