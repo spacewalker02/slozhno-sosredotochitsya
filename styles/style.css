@@ -43,7 +43,7 @@ button:disabled {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(50, 49, 45, 0.4)
+  outline: var(--menu-outline);
 }
 
 .link {
@@ -82,6 +82,32 @@ button:disabled {
   border-left: 1px solid var(--menu-color);
   bottom: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.decoration {
+  display: var(--hidden-element);
+  position: absolute;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  top: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+  right: clamp(2.375rem, 2.0139rem + 1.5408vw, 3rem);
+  line-height: 25px;
+  align-self: center;
+}
+
+.decoration::after {
+  content: '';
+  color: var(--accent-color);
+  display: var(--hidden-element);
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  left: 38px;
+  top: 8px;
+  box-shadow: 0px 0px 4px 2px currentColor;
 }
 
 .header {
