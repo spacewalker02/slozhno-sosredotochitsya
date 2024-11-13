@@ -33,12 +33,14 @@ button:disabled {
 
 .header__theme-menu-button {
   border: none;
-  padding: 0 13px;
+  padding: 1.5px 13px;
   color: var(--menu-color);
   font-family: inherit;
   font-size: 18px;
   background-color: transparent;
   cursor: pointer;
+  text-transform: lowercase;
+  line-height: 100%;
 }
 
 .header__theme-menu-button:hover {
@@ -199,6 +201,7 @@ button:disabled {
   font-family: var(--main-font);
   font-weight: normal;
   font-size: 18px;
+  letter-spacing: 1,5px;
 }
 
 .content__paragraph {
@@ -210,6 +213,8 @@ button:disabled {
 .advice_title {
   font-weight: normal;
   color: var(--block-title-color);
+  letter-spacing: 0.7px;
+  line-height: 130%;
 }
 
 .advice__block {
@@ -263,6 +268,7 @@ button:disabled {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
+    gap: 10px;
   }
 
   .content-why {
