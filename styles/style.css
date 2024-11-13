@@ -218,12 +218,6 @@ button:disabled {
   line-height: 131%;
 }
 
-.advice__block {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .content-images {
   display: flex;
   flex-direction: column;
@@ -267,7 +261,7 @@ button:disabled {
 
   .two-columns__block {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: max(236px) 2fr;
     grid-template-rows: 1fr;
     gap: 10px;
   }
@@ -320,6 +314,14 @@ button:disabled {
     grid-row: 1;
   }
 
+  .content-why {
+    grid-column: 1;
+  }
+
+  .content-text-why {
+    grid-column: 2;
+  }
+
   .content-images {
     grid-template-rows: max(260px) max(315px) max(428px);
   }
@@ -331,9 +333,9 @@ button:disabled {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   .page {
-    background-image: url(../images/cover-image-dark.png);
+    background-image: url(../images/cover-image-light.png);
   }
 
 }
