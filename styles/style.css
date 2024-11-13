@@ -1,12 +1,15 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   min-inline-size: 375px;
   margin: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--main-font), sans-serif;
+  background-attachment: fixed;
+  background-image: var(--background);
+  background-position: center;
+  background-size: 100%;
 }
 
 .header__theme-menu-button_active {
@@ -28,7 +31,7 @@ button:disabled {
 }
 
 .header__theme-menu-button {
-  border: none;
+  border: transparent;
   padding: 4px 13px;
   color: var(--menu-color);
   font-family: inherit;
@@ -88,11 +91,6 @@ button:disabled {
   height: 100vh;
   padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   margin-bottom: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
-  background-image: var(--background);
-  background-position: center;
-  background-size: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 .header__theme-menu {
