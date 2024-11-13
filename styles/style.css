@@ -202,7 +202,7 @@ button:disabled {
   font-weight: normal;
   font-size: 18px;
   letter-spacing: 1,8px;
-  line-height: 131%;
+  line-height: 130%;
 }
 
 .content__paragraph {
@@ -214,7 +214,15 @@ button:disabled {
 .advice_title {
   font-weight: normal;
   color: var(--block-title-color);
-  letter-spacing: 0.9px;
+  letter-spacing: 1px;
+  line-height: 131%;
+}
+
+.advice-text {
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 1,8px;
   line-height: 131%;
 }
 
@@ -238,14 +246,22 @@ button:disabled {
 }
 
 .header_footer {
-  justify-self: center;
+  text-align: center;
   grid-row: 2;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--header-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 @media (min-width: 500px) {
   .header_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-left: -20px;
+  }
+
+  .header_footer {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .text-header {
@@ -263,7 +279,7 @@ button:disabled {
     display: grid;
     grid-template-columns: max(236px) 2fr;
     grid-template-rows: 1fr;
-    gap: 10px;
+    gap: 20px;
   }
 
   .content-why {
