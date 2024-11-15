@@ -4,7 +4,7 @@
   --text-color: #353430;
   --accent-color: #ff8dcb;
   --header-color: #ffc2e6;
-  --main-font: 'IBM Plex mono';
+  --main-font: 'IBM Plex mono', monospace;
   --focus-color: #ff0070;
   --menu-color: #353430;
   --hidden-element: none;
