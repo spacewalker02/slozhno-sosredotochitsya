@@ -327,7 +327,7 @@ button:disabled {
   }
 }
 
-@media (width >= 1024px) { 
+@media (width >= 1024px) {
   .header__theme-menu-list {
     flex-direction: row;
     align-self: flex-start;
