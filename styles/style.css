@@ -305,7 +305,6 @@ button:disabled {
   }
 
   .content-images {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
@@ -352,13 +351,9 @@ button:disabled {
     grid-template-rows: 1fr;
   }
 
-  .content-images {
-    grid-template-rows: max(260px) max(315px) max(428px);
-  }
-}
-
 @media (width >= 1440px) {
   .page {
     margin: 0 auto;
   }
+}
 }
